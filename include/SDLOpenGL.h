@@ -14,6 +14,10 @@ public:
               int _width,
               int _height);
 
+    void makeCurrent() const { SDL_GL_MakeCurrent(m_window,m_glContext); }
+    void swapWindow() const { SDL_GL_SwapWindow(m_window); }
+
+
 private:
     int m_x;
     int m_y;
@@ -29,6 +33,8 @@ private:
 
     //Adding const makes this a read only method
     void errorExit(const std::string &_msg) const;
+
+
 
 };
 
