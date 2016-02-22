@@ -27,14 +27,14 @@ int main(int argc, char* argv[])
    }
 
 
-
+    SDL_Quit();
+    return 0;
 }
 
 void initializeGL()
 {
     ngl::NGLInit::instance();
     glClearColor(0.8,0.8,0.8,1.0);
-
 }
 
 void renderGL()
